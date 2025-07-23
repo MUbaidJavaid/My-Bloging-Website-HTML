@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tech Review</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #1f4a89;
+      --accent: #4CAF50;
+      --white: #fff;
+      --dark-bg: #0e1d3a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      
+      color: var(--white);
+    }
+
+    header {
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 5%;
+      color: #0e1d3a; 
+      height: 50px;
+    }
+
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: var(--white);
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--dark-bg);
+    }
+
+    .hero {
+        height: 95vh;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      padding: 4rem 5%;
+      margin-top: 10px;
+      background:url(bg.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      color: var(--white);
+    }
+
+    .hero-text p {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      color: #8fd3ff;
+    }
+
+    .price {
+      color: #deb887;
+      font-size: 1.4rem;
+      margin: 1rem 0;
+    }
+
+    .hero-img {
+      max-width: 500px;
+    }
+
+    .hero-img img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    button.shop-btn {
+      background: var(--white);
+      color: #1f4a89;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+
+     #categories {
+        margin: 1rem;
+        height: 30vh;
+        width: full;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4rem;
+      padding: 2rem;
+      background-color: #3e3e3e90;
+    }
+    .card {
+        display: flex;
+        flex-direction: row;
+        justify-items: end;
+        gap: between;
+      background: white;
+      border-radius: 8px;
+      height: 100px;
+      padding: 0.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      color: #0e1d3a;
+    }
+    .card-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5rem;
+        padding-left: 1rem;
+    }
+    /* Footer Styles */
+#footer {
+  background: #0e1d3a;
+  color: var(--white);
+  padding: 2rem 5%;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links a {
+  color: #8fd3ff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--white);
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-social a {
+  color: var(--white);
+  font-size: 1.2rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.footer-social a:hover {
+  background: var(--primary);
+}
+
+.footer-newsletter {
+  margin-bottom: 1.5rem;
+}
+
+.footer-newsletter p {
+  margin-bottom: 0.5rem;
+  color: #8fd3ff;
+}
+
+.newsletter-form {
+  display: flex;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.newsletter-form button {
+  background: var(--accent);
+  color: var(--white);
+  border: none;
+  padding: 0 1rem;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.footer-copyright {
+  color: #8fd3ff;
+  font-size: 0.9rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Computers</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Collections</a>
+      <a href="#">Products</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>My Bloging Website</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore vero repellat consectetur omnis fugiat neque placeat fuga illo repudiandae quae.</p>
+      <div class="price">Starting at $1,999</div>
+      <button class="shop-btn">Learn More</button>
+    </div>
+    <div id="categories">
+       <div class="card">
+        <div>
+            <img style="height: 70px;" src="keboard.png">
+        </div>
+        <div class="card-text">
+            <h3> Lighting Keyboard </h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <h5>Prics:2000</h5>
+        </div>
+        
+      </div>
+       <div class="card">
+        <div>
+            <img style="height: 70px;" src="mouse.png">
+        </div>
+        <div class="card-text">
+            <h3> Lighting Mouse </h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <h5>Prics:500</h5>
+        </div>
+      </div>
+      <div class="card">
+        <div>
+            <img style="height: 70px;" src="headphone.png">
+        </div>
+        <div class="card-text">
+            <h3> HeadPhone </h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <h5>Prics:3500</h5>
+        </div>
+        
+      </div>
+      </div>
+  </section>
+  
+<footer id="footer">
+  <div class="footer-content">
+    <div class="footer-logo">TechReview</div>
+    
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#">Reviews</a>
+      <a href="#">Products</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </div>
+    
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    
+    <div class="footer-newsletter">
+      <p>Subscribe for tech updates</p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Your Email">
+        <button>Subscribe</button>
+      </div>
+    </div>
+    
+    <div class="footer-copyright">
+      &copy; 2025 TechReview. All rights reserved.
+    </div>
+  </div>
+</footer>
+</body>
+</html>
